@@ -1,0 +1,14 @@
+@use '../helper';
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  margin-inline: auto;
+
+  @include helper.responsive(md) {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 2rem;
+  }
+}

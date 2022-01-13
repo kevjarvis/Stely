@@ -1,0 +1,82 @@
+@use '../helper';
+
+.reviews-section {
+  position: relative;
+  margin-inline: auto;
+
+  @include helper.responsive(md) {
+    margin-inline: 0;
+  }
+}
+
+.review {
+  position: relative;
+  display: grid;
+  grid-template-areas: "photo description description"
+                        "photo description description"
+                        "none name name";
+  width: auto;
+  max-width: 500px;
+  background-color: helper.$dark-3;
+  border-radius: 5px;
+  margin-inline: auto;
+  grid-gap: 0.5rem;
+  padding: 0.8rem;
+  margin-bottom: 2rem;
+
+  &:before {
+    position: absolute;
+    content: '';
+    height: 6rem;
+    border-left: dashed 2px helper.$light;
+    inset: -6rem 50%;
+    transform: translate(-50%, 0);
+
+    @include helper.responsive(md) {
+      height: 0;
+      width: 8rem;
+      border-top: dashed 2px helper.$light;
+      left: -8rem;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    $size: 6rem;
+    z-index: -1;
+    width: $size;
+    height: $size;
+    top: -1rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 50%;
+    background-color: helper.$success;
+    filter: blur(4rem);
+    opacity: 70%;
+  }
+}
+
+.review-photo {
+  grid-area: photo;
+  $size: 2.4rem;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  margin-inline: 0.5rem;
+}
+
+.review-description {
+  grid-area: description;
+  @include helper.t-medium(0.9rem);
+  color: helper.$light;
+  margin-right: 0.5rem;
+}
+
+.review-name {
+  grid-area: name;
+  @include helper.t-regular(0.8rem);
+  color: helper.$dark-35;
+}

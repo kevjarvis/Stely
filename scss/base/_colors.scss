@@ -1,0 +1,20 @@
+$primary: rgba(237, 198, 67, 1);
+$secondary: rgba(155, 159, 147, 1);
+$dark: rgb(25, 25, 25);
+$light: rgba(238, 240, 242, 1);
+$info: rgba(35, 100, 170, 1);
+$danger: rgba(200, 62, 77, 1);
+$success: rgba(66, 182, 62, 1);
+
+$dark-3 : lighten($dark, 1.8%);
+$dark-10 : lighten($dark, 10%);
+$dark-35 : lighten($dark, 35%);
+
+$colors : (
+        'green': rgba(88, 255, 10, 1),
+        'green-19': rgba(88, 255, 10, 0.19),
+        'blue': rgba(53, 98, 255, 1),
+        'blue-19': rgba(53, 98, 255, 0.19),
+        'pink': rgba(236, 14, 255, 1),
+        'pink-19': rgba(236, 14, 255, 0.19)
+);

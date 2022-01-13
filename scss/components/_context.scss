@@ -1,0 +1,26 @@
+@use '../helper';
+
+.context {
+  position: sticky;
+  bottom: 0;
+  width: 100vw;
+
+  padding: 2rem 1rem 1rem 1rem;
+  background-color: helper.$dark-3;
+  min-height: 20px;
+  max-height: 80vh;
+  border-radius: 15px 15px 0 0;
+  z-index: 10;
+
+  &:before {
+    position: absolute;
+    content: '';
+    background-color: helper.$dark-10;
+    width: 4rem;
+    height: 5px;
+    border-radius: 50px;
+    top: 12px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}

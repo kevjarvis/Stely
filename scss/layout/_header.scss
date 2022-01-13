@@ -1,0 +1,24 @@
+@use "../helper";
+
+.banner {
+  background-color: helper.$dark;
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 0.8rem 1.5rem;
+  align-items: center;
+  border: none;
+
+  @include helper.responsive(md) {
+    padding: 2rem;
+    max-width: 90vw;
+    margin-inline: auto;
+  }
+
+  @include helper.responsive(xl) {
+    max-width: 80vw;
+  }
+
+  @include helper.responsive(xxl) {
+    max-width: 70vw;
+  }
+}
