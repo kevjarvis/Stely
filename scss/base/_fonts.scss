@@ -1,0 +1,29 @@
+@mixin t-regular($size) {
+  font-family: 'Poppins', sans-serif;
+  font-size: $size;
+  font-weight: 400;
+}
+
+@mixin t-medium($size) {
+  font-family: 'Poppins', sans-serif;
+  font-size: $size;
+  font-weight: 500;
+}
+
+@mixin t-semibold($size) {
+  font-family: 'Poppins', sans-serif;
+  font-size: $size;
+  font-weight: 600;
+}
+
+@mixin t-bold($size) {
+  font-family: 'Poppins', sans-serif;
+  font-size: $size;
+  font-weight: 700;
+}
+
+@mixin t-black($size) {
+  font-family: 'Poppins', sans-serif;
+  font-size: $size;
+  font-weight: 900;
+}

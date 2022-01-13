@@ -1,0 +1,22 @@
+@use '../helper';
+
+.logo {
+  position: relative;
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: helper.$light;
+
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: helper.$light;
+    border-radius: 50%;
+    top: 0;
+    left: 53px;
+  }
+}
+

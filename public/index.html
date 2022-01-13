@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <link rel="stylesheet" type="text/css" href="../scss/layout/_container.scss"/>
+  <link rel="stylesheet" type="text/css" href="../scss/components/_review.scss"/>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stely</title>
@@ -10,7 +12,52 @@
   <script src="https://kit.fontawesome.com/acb2c545b2.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
+<body id="landing">
+  <header class="banner">
+    <a href="#" class="logo">Stely</a>
 
+    <nav class="navbar" role="navigation">
+      <button class="burger-button" id="toggle" aria-expanded="false">
+        <span class="burger-text">Menu</span>
+        <span class="nav-burgerbars"></span>
+      </button>
+
+      <ul id="navmenu" class="nav-menu nav-menu--collapsed">
+        <li class="navitem"><a href="#" class="navlink navlink--active">Inicio</a></li>
+        <li class="navitem"><a href="#" class="navlink">Proyectos</a></li>
+        <li class="navitem"><a href="#" class="navlink">Acerca de</a></li>
+
+        <li class="navitem"><a href="#" class="navlink">Ingresar</a></li>
+        <li class="navitem"><a href="#" class="navlink">Registrarse</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="glass-background"></div>
+
+  <main>
+    <section class="hero" id="hero">
+      <h1 class="hero-title">Invierte en tecnología
+        <span class="hero-title--accent">sin mínimos.</span>
+      </h1>
+
+      <div class="container">
+
+        <img src="media/test2.svg" alt="Imagen del hero, invierte simple." class="hero-img">
+
+        <div class="reviews-section">
+          <div class="review">
+            <img class="review-photo" src="media/claudio_gaete.jpg" alt="Claudio Gaete">
+            <p class="review-description">“Nunca creí que invertir en tecnología fuera tan fácil, hay pocas oportunidades así en Latinoamérica.”</p>
+            <span class="review-name">Claudio Gaete - Inversor</span>
+          </div>
+        </div>
+
+      </div>
+
+      <a href="#simulation" class="hero-cta">Simular <i class="fas fa-arrow-down"></i></a>
+    </section>
+  </main>
+
+  <script src="scripts/app.js"></script>
 </body>
 </html>

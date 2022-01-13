@@ -1,0 +1,15 @@
+@use '../helper';
+
+html {
+  @include helper.responsive(md) {
+    font-size: 16px;
+  }
+
+  @include helper.responsive(xl) {
+    font-size: 17px;
+  }
+
+  @include helper.responsive(xxl) {
+    font-size: 18px;
+  }
+}
