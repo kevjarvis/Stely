@@ -28,8 +28,7 @@ let toggle = document.getElementById("toggle");
 let menu = document.getElementById("navmenu");
 let opacity_blur = document.getElementById("glass-background");
 let body = document.getElementsByTagName('body')[0];
-
-let menu_items = document.getElementsByClassName('navlink')
+document.getElementsByClassName('navlink');
 
 function toggle_nav() {
   if (menu.classList.contains('nav-menu--collapsed')) {
@@ -52,13 +51,3 @@ toggle.addEventListener('click', function () {
 opacity_blur.addEventListener('click', function () {
   toggle_nav();
 })
-
-for (const menuItemsKey in menu_items) {
-  menu_items[menuItemsKey].addEventListener('click', function () {
-    toggle_nav();
-  })
-}
-
-
-
-
