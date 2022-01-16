@@ -1,0 +1,116 @@
+@use '../helper';
+
+.newsletter-section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.newsletter-title {
+  @include helper.t-black(1.7rem);
+  color: helper.$light;
+}
+
+.newsletter-text {
+  @include helper.t-medium(1rem);
+  color: helper.$light;
+  text-align: center;
+  max-width: 70%;
+
+  &--accent {
+    color: helper.$primary;
+  }
+}
+
+.btn {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  padding: 0.83rem 2rem;
+  border-radius: 58px;
+  color: helper.$dark;
+  @include helper.t-bold(1.1rem);
+  background-color: helper.$primary;
+  text-transform: uppercase;
+  margin-inline: auto;
+  transition: background-color 0.4s;
+
+  &:hover {
+    background-color: helper.$light;
+    transition: background-color 0.7s;
+  }
+
+  @include helper.responsive(md) {
+    font-size: 1rem;
+  }
+}
+
+.newsletter-subtitle {
+  @include helper.t-black(1.3rem);
+  color: helper.$light;
+
+  &--accent {
+    color: helper.$primary;
+  }
+}
+
+.newsletter-form {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+
+  label {
+    @include helper.t-regular(1rem);
+    color: helper.$light;
+  }
+
+  div {
+    position: relative;
+    width: 90vw;
+
+    @include helper.responsive(sm) {
+      width: 80vw;
+    }
+
+    @include helper.responsive(md) {
+      //width: 70vw;
+      max-width: 50vw;
+    }
+
+    @include helper.responsive(lg) {
+      max-width: 30rem;
+    }
+
+    input {
+      padding: 0.83rem;
+      background-color: transparent;
+      @include helper.t-regular(1rem);
+      color: helper.$light;
+      border-radius: 58px;
+      border: solid 2px helper.$primary;
+      padding-right: 8rem;
+      width: 100%;
+      &:focus {
+        outline: transparent;
+      }
+    }
+
+    button {
+      position: absolute;
+      right: 0;
+      cursor: pointer;
+      padding: 0.81rem 1.5rem;
+      border-radius: 58px;
+      border: solid 2px helper.$primary;
+      color: helper.$dark;
+      @include helper.t-bold(1.1rem);
+      background-color: helper.$primary;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -816,4 +816,146 @@ html {
   color: #edc643;
 }
 
+.newsletter-section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.newsletter-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: #eef0f2;
+}
+
+.newsletter-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #eef0f2;
+  text-align: center;
+  max-width: 70%;
+}
+.newsletter-text--accent {
+  color: #edc643;
+}
+
+.btn {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  padding: 0.83rem 2rem;
+  border-radius: 58px;
+  color: #191919;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background-color: #edc643;
+  text-transform: uppercase;
+  margin-inline: auto;
+  transition: background-color 0.4s;
+}
+.btn:hover {
+  background-color: #eef0f2;
+  transition: background-color 0.7s;
+}
+@media (min-width: 768px) {
+  .btn {
+    font-size: 1rem;
+  }
+}
+
+.newsletter-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #eef0f2;
+}
+.newsletter-subtitle--accent {
+  color: #edc643;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+}
+.newsletter-form label {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #eef0f2;
+}
+.newsletter-form div {
+  position: relative;
+  width: 90vw;
+}
+@media (min-width: 576px) {
+  .newsletter-form div {
+    width: 80vw;
+  }
+}
+@media (min-width: 768px) {
+  .newsletter-form div {
+    max-width: 50vw;
+  }
+}
+@media (min-width: 992px) {
+  .newsletter-form div {
+    max-width: 30rem;
+  }
+}
+.newsletter-form div input {
+  padding: 0.83rem;
+  background-color: transparent;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #eef0f2;
+  border-radius: 58px;
+  border: solid 2px #edc643;
+  padding-right: 8rem;
+  width: 100%;
+}
+.newsletter-form div input:focus {
+  outline: transparent;
+}
+.newsletter-form div button {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  padding: 0.81rem 1.5rem;
+  border-radius: 58px;
+  border: solid 2px #edc643;
+  color: #191919;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background-color: #edc643;
+  text-transform: uppercase;
+}
+
+#footer {
+  max-width: 90vw;
+  margin-inline: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  gap: 0.4rem;
+  color: #eef0f2;
+  padding: 1rem;
+}
+
+.footer-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 /*# sourceMappingURL=main.css.map */

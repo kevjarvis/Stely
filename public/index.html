@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <link rel="stylesheet" type="text/css" href="../scss/layout/_newsletter.scss"/>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stely</title>
@@ -108,7 +109,31 @@
         </div>
       </div>
     </section>
+
+    <section id="newsletter" class="newsletter-section">
+      <h2 class="newsletter-title">¿Que esperas?</h2>
+      <p class="newsletter-text"><span class="newsletter-text--accent">Invierte desde $1</span> en tecnología, invierte en progreso, invierte con confianza.</p>
+      <a href="#" class="btn btn--primary">Ver los proyectos</a>
+
+      <h3 class="newsletter-subtitle">
+        Únete a nuestro
+        <span class="newsletter-subtitle--accent">newsletter</span>
+      </h3>
+
+      <form action="#" class="newsletter-form">
+        <label for="email">Correo electrónico</label>
+        <div>
+          <input type="email" name="email" id="email" placeholder="correo@mail.com">
+          <button type="submit">Unirme</button>
+        </div>
+      </form>
+    </section>
+
   </main>
+  <footer id="footer">
+    <a href="#" class="logo">Stely</a>
+    <p class="footer-text">Hecho con <i style="color:red" class="bi bi-heart-fill"></i> desde Chile!</p>
+  </footer>
 
   <script src="scripts/app.js" type="module"></script>
 </body>

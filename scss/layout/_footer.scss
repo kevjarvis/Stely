@@ -1,0 +1,16 @@
+@use '../helper';
+
+#footer {
+  max-width: 90vw;
+  margin-inline: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  gap: 0.4rem;
+  color: helper.$light;
+  padding: 1rem;
+}
+
+.footer-text {
+  @include helper.t-regular(1rem);
+}
