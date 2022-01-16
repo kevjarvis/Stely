@@ -4,9 +4,10 @@
 @use 'layout/navbar';
 @use 'pages/landing';
 @use 'layout/header';
-@use 'components/context';
 @use 'components/logo';
 @use 'layout/blur-screen';
 @use 'layout/hero';
 @use 'components/review';
 @use 'layout/container';
+@use 'layout/section';
+@use 'layout/simulator';

@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="SASS" pattern="file[Stely]:scss//*&amp;&amp;!file[Stely]:public/styles/*||file:public/scripts/app.js||file:public/index.html" />
+</component>
