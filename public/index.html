@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <link rel="stylesheet" type="text/css" href="../scss/layout/_container.scss"/>
-  <link rel="stylesheet" type="text/css" href="../scss/components/_review.scss"/>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stely</title>
@@ -10,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Proza+Libre:wght@800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   <script src="https://kit.fontawesome.com/acb2c545b2.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body id="landing">
@@ -56,8 +55,61 @@
 
       <a href="#simulation" class="hero-cta">Simular <i class="fas fa-arrow-down"></i></a>
     </section>
+    <section class="simulator-section" id="simulation">
+      <div class="simulator-header simulator-header--section">
+        <h2 class="simulator-title simulator-title--section">Simulación</h2>
+      </div>
+
+      <div class="simulator-container">
+        <div class="simulator-descriptions">
+          <p id="simulation-helper" class="simulator-text"></p>
+          <p class="simulator-text simulator-text--info">Sigue bajando para continuar <i class="fas fa-chevron-down"></i></p>
+        </div>
+
+        <!--review: en vez de hacer una única clase context podría hacer un mixin y aplicar el principio de
+        responsabilidad única.-->
+        <div class="simulator-context">
+          <!--Aquí dentro los componentes del simulador-->
+          <form action="#" class="simulator-form">
+
+            <!--Capital input-->
+            <div id="simulator-capital" class="simulator-capital" style="opacity: 0">
+              <label class="simulator-label" for="capital">¿Cuanto quieres invertir?</label>
+
+              <div class="simulator-input">
+                <!--A este lo trato como un solo componente-->
+                <span>$</span>
+                <input type="number" id="capital" name="capital" placeholder="100.000">
+              </div>
+            </div>
+
+            <!--Risk selection-->
+            <div id="simulator-risk" class="simulator-risk" style="opacity: 0">
+              <span class="simulator-label">Escoge el nivel de riesgo</span>
+
+              <div class="simulator-switch">
+                <input type="radio" id="risk-low" name="risk_selection" value="Bajo">
+                <label for="risk-low">Bajo</label>
+                <input type="radio" id="risk-medium" name="risk_selection" value="Medio" checked>
+                <label for="risk-medium">Medio</label>
+                <input type="radio" id="risk-high" name="risk_selection" value="Alto">
+                <label for="risk-high">Alto</label>
+              </div>
+
+              <span class="simulator-text simulator-text--info">El riesgo lo puedes cambiar luego</span>
+            </div>
+          </form>
+
+          <div id="simulator-returns" class="simulator-returns" style="opacity: 0">
+            <p class="simulator-label">Capital final</p>
+            <span class="simulator-equity" id="equity">$ 123.000</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
   </main>
 
-  <script src="scripts/app.js"></script>
+  <script src="scripts/app.js" type="module"></script>
 </body>
 </html>

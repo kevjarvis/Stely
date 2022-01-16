@@ -1,0 +1,278 @@
+@use "../helper";
+
+#simulation {
+  height: 390vh;
+}
+
+.simulator-section {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 1rem 0;
+}
+
+.simulator-header {
+  position: relative;
+  background-color: helper.$dark;
+  border: solid 1px helper.$dark;
+  padding: 0.8rem;
+  z-index: 9;
+
+  @include helper.responsive(lg) {
+    position: sticky;
+    top: 0
+  }
+}
+
+.simulator-title {
+  @include helper.t-black(1.7rem);
+  color: helper.$light;
+  text-align: center;
+  z-index: 9;
+}
+
+.simulator-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+
+
+  @include helper.responsive(sm) {
+    margin-inline: auto;
+    width: 100vw;
+    max-width: 95%;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-areas: "description simulator";
+    gap: 4rem;
+    height: 100vh;
+    align-items: flex-start;
+    justify-content: space-around;
+    //top: 28%;
+  }
+
+  @include helper.responsive(lg) {
+    max-width: 80%;
+  }
+}
+
+.simulator-context {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+
+  padding: 2rem 1rem 1rem 1rem;
+  background-color: helper.$dark-3;
+  min-height: 20px;
+  border-radius: 15px 15px 0 0;
+  z-index: 10;
+
+  @include helper.responsive(sm) {
+    grid-area: simulator;
+    max-width: 700px;
+    height: auto;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: auto;
+    border-radius: 15px;
+  }
+
+  @include helper.responsive(lg) {
+    $spacing: 3rem;
+    padding-inline: $spacing;
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    background-color: helper.$dark-10;
+    width: 4rem;
+    height: 5px;
+    border-radius: 50px;
+    top: 12px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+.simulator-descriptions {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  grid-area: description;
+  max-width: 90%;
+  margin-inline: auto;
+  height: 8rem;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+
+  @include helper.responsive(sm) {
+    align-self: center;
+    width: 30vw;
+    max-width: initial;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -40vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    $size: 5rem;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background: linear-gradient(180deg,helper.$primary, helper.$success);
+    filter: blur($size);
+    z-index: -1;
+
+    @include helper.responsive(md) {
+      bottom: auto;
+      right: -9rem;
+      left: auto;
+      transform: initial;
+    }
+  }
+}
+
+.simulator-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  @include helper.t-black(1.5rem);
+  color: helper.$light;
+  text-align: center;
+
+  &--info {
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: darken(helper.$light, 30%);
+  }
+}
+
+/*Estilos para formulario del simulador*/
+
+.simulator-form {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.9rem;
+}
+
+.simulator-label {
+  @include helper.t-bold(1rem);
+  text-transform: uppercase;
+  color: helper.$light;
+}
+
+// Simulation input styles
+.simulator-input :is(span, input) {
+  @include helper.t-bold(1.3rem);
+  background-color: transparent;
+}
+
+/*Ocultador de botones de incremento/decremento en input number*/
+.simulator-input input::-webkit-outer-spin-button,
+.simulator-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.simulator-input input {
+  -moz-appearance:textfield; /* Firefox */
+  width: 15rem;
+  border: hidden;
+  color: helper.$light;
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: lighten(helper.$dark, 30%);
+  }
+}
+
+.simulator-input span {
+  color: helper.$light;
+}
+
+// Estilos del switch del simulador
+.simulator-switch {
+  display: flex;
+  overflow: hidden;
+
+  input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+    &:checked + label {
+      background-color: helper.$light;
+      color: helper.$dark;
+    }
+  }
+
+  label {
+    background-color: transparent;
+    color: helper.$light;
+    @include helper.t-bold(1rem);
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    padding: 0.83rem 1.3rem;
+    margin-right: -1px;
+    border: solid 1px helper.$light;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:first-of-type {
+      border-radius: 10px 0 0 10px;
+    }
+
+    &:last-of-type {
+      border-radius: 0 10px 10px 0;
+      margin-right: 0;
+    }
+  }
+}
+
+/*Estilos propios de la simulación (resultados)*/
+
+.simulator-capital,
+.simulator-risk,
+.simulator-returns {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.4rem;
+  $margin: 4vw;
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+.simulator-risk {
+  margin-bottom: 0.9rem;
+}
+
+.simulator-returns .simulator-label:after {
+  position: relative;
+  content: '12 meses';
+  color: lighten(helper.$dark, 40%);
+  @include helper.t-medium(0.8rem);
+  right: -1.2rem;
+}
+
+.simulator-equity {
+  @include helper.t-bold(1.3rem);
+  background-color: transparent;
+  color: helper.$primary;
+}
+
+//TODO: añadir media query hasta los 415px.
+// Hasta ese entonces que quede todo centrado
