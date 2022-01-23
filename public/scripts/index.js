@@ -8,18 +8,21 @@ history.scrollRestoration = 'manual';
 const inputCapital = document.getElementById("capital");
 const riskSelection = document.querySelectorAll('input[name="risk_selection"]');
 
+// Validación regEx del input del simulador
 setInputFilter(inputCapital, function(value) {
   return /^\d*$/.test(value); });
-
 
 /*Comprobación y despliegue por default*/
 updateEquity(inputCapital, riskSelection);
 
-$(riskSelection).on('change', () => {
-  updateEquity(inputCapital, riskSelection);
-})
+console.log(riskSelection)
+for (const risk of riskSelection) {
+  risk.addEventListener('change', () => {
+    updateEquity(inputCapital, riskSelection)
+  })
+}
 
-$('#capital').on('change', () => {
+inputCapital.addEventListener('change', () => {
   updateEquity(inputCapital, riskSelection);
 })
 
