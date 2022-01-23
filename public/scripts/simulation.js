@@ -6,6 +6,7 @@ function checkRisk(riskOptions) {
   for (const typeOfRisk of riskOptions) {
     if (typeOfRisk.checked) {
       risk = typeOfRisk.value;
+      window.scroll(0, window.innerHeight*3.4)
     }
   }
   return risk;

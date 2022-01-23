@@ -26,6 +26,13 @@ inputCapital.addEventListener('change', () => {
   updateEquity(inputCapital, riskSelection);
 })
 
+const simulatorForm = document.querySelector('.simulator-form');
+simulatorForm.reset();
+simulatorForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  window.scroll (0, window.innerHeight*3)
+})
+
 const referenceElement = DESCRIPTION_COMPONENT;
 window.onscroll = () => {
   changeComponentsOnScroll(referenceElement, handleStatesSimulator);
