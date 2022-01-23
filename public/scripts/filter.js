@@ -1,6 +1,6 @@
 import {projectObject} from "./fetchProjectData.js";
 import {filterArrayOfObjects} from "./utils/fillterArray.js";
-import {renderProjects} from "./renderProjects.js";
+import {renderProjects, emptyProjects} from "./renderProjects.js";
 
 const filterButton = document.querySelector('#filter-button');
 const filterComponent = document.querySelector('#filter');
@@ -128,6 +128,11 @@ export function updatePreferences(element, posOrder, projectContainer) {
           break;
       }
     }
-    renderProjects(actualPreferences, projectContainer, ['project-wrapper'])
+    if (actualPreferences.length > 0) {
+      renderProjects(actualPreferences, projectContainer, ['project-wrapper'])
+    } else {
+      emptyProjects(projectContainer, ['empty-projects'])
+    }
+
   })
 }

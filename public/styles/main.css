@@ -1331,6 +1331,14 @@ input:checked + label:hover {
   margin-top: 3rem;
 }
 
+.empty-projects h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #eef0f2;
+  opacity: 0.4;
+}
+
 .filter-projects--expanded {
   visibility: visible !important;
   position: relative !important;

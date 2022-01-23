@@ -76,3 +76,11 @@
     margin-top: 3rem;
   }
 }
+
+.empty-projects {
+  h3 {
+    @include helper.t-black(2rem);
+    color: helper.$light;
+    opacity: 0.4;
+  }
+}

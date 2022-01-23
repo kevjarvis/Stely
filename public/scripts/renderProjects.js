@@ -27,3 +27,11 @@ export function renderProjects(objectToRender, target, classes) {
     target.appendChild(component)
   }
 }
+
+export function emptyProjects(target, classes) {
+  resetDOMArea(target)
+  const component = document.createElement('div');
+  component.classList.add(...classes);
+  component.innerHTML = `<h3>No se han encontrado proyectos :(</h3>`
+  target.appendChild(component);
+}
