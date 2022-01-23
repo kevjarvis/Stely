@@ -1,0 +1,26 @@
+@use "../helper";
+@use "project";
+
+.project-wrapper {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  align-items: flex-start;
+  width: project.$width-sm;
+  //margin-inline: auto;
+  @include helper.responsive(md) {
+    width: project.$width-md;
+  }
+
+  /*@include helper.responsive(lg) {
+    width: project.$width-lg;
+  }*/
+}
+
+.project-actions {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}

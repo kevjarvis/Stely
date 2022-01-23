@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Stely</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Proza+Libre:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <script src="https://kit.fontawesome.com/acb2c545b2.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header class="banner">
+    <a href="#" class="logo">Stely</a>
+
+    <nav class="navbar" role="navigation">
+      <button class="burger-button" id="toggle" aria-expanded="false">
+        <span class="burger-text">Menu</span>
+        <span class="nav-burgerbars"></span>
+      </button>
+
+      <ul id="navmenu" class="nav-menu nav-menu--collapsed">
+        <li class="navitem"><a href="index.html" class="navlink">Inicio</a></li>
+        <li class="navitem"><a href="#" class="navlink navlink--active">Proyectos</a></li>
+        <li class="navitem"><a href="#" class="navlink">Acerca de</a></li>
+
+        <li class="navitem"><a href="#" class="navlink">Ingresar</a></li>
+        <li class="navitem"><a href="#" class="navlink">Registrarse</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="project-section">
+      <div class="section-heading">
+        <h2 class="section-heading--title">Todos los proyectos</h2>
+        <p class="section-heading--description">Invierte en cualquiera desde $1</p>
+      </div>
+      <div id="project-container" class="projects-container">
+        <button id="filter-button" class="button--primary">FILTRO <i class="bi bi-funnel-fill"></i></button>
+        <div id="filter" class="filter-projects">
+          <h3>Filtro</h3>
+          <div class="filter-option">
+            <strong>Novedad</strong>
+            <div id="filter-novedad" class="dropdown">
+              <button class="dropdown-button" type="button">
+                <span></span>
+                <i class="bi bi-caret-down-fill"></i>
+              </button>
+
+              <form action="#" class="dropdown-menu">
+
+                <input type="radio" id="novedad-none" name="novedad" value="none" checked>
+                <label for="novedad-none">Todos</label>
+
+                <div class="dropdown-divider"></div>
+
+                <input type="radio" id="lo-mas-nuevo" name="novedad" value="new-projects">
+                <label for="lo-mas-nuevo">Lo más nuevo</label>
+
+                <input type="radio" id="mas-innovadores" name="novedad" value="most-innovative">
+                <label for="mas-innovadores">Más innovadores</label>
+              </form>
+            </div>
+          </div>
+
+          <div class="filter-option">
+            <strong>Riesgo</strong>
+            <div id="filter-risk" class="dropdown">
+              <button class="dropdown-button" type="button">
+                                                         <span></span>
+                                                         <i class="bi bi-caret-down-fill"></i>
+                                                         </button>
+
+              <form action="#" class="dropdown-menu">
+
+                <input type="radio" id="risk-none" name="risk" value="none" checked>
+                <label for="risk-none">Todos</label>
+
+                <div class="dropdown-divider"></div>
+
+                <input type="radio" id="riesgo-alto" name="risk" value="high-risk">
+                <label for="riesgo-alto">Alto</label>
+
+                <input type="radio" id="riesgo-medio" name="risk" value="medium-risk">
+                <label for="riesgo-medio">Medio</label>
+
+                <input type="radio" id="riesgo-bajo" name="risk" value="low-risk">
+                <label for="riesgo-bajo">Bajo</label>
+              </form>
+            </div>
+          </div>
+
+          <div class="filter-option">
+            <strong>inversores</strong>
+            <div id="filter-investors" class="dropdown">
+              <button class="dropdown-button" type="button">
+                <span></span>
+                <i class="bi bi-caret-down-fill"></i>
+              </button>
+
+              <form action="#" class="dropdown-menu">
+
+                <input type="radio" id="investors-none" name="investors" value="none" checked>
+                <label for="investors-none">Todos</label>
+
+                <div class="dropdown-divider"></div>
+
+                <input type="radio" id="menos-100" name="investors" value="minus-100">
+                <label for="menos-100">menos de  100</label>
+
+                <input type="radio" id="entre100-500" name="investors" value="between100-500">
+                <label for="entre100-500">Entre 100 y 500</label>
+
+                <input type="radio" id="mayor-500" name="investors" value="more-than-500">
+                <label for="mayor-500">Mayor a 500</label>
+              </form>
+            </div>
+          </div>
+
+        </div>
+        <div id="all-projects" class="all-projects"></div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    <a href="#" class="logo">Stely</a>
+    <p class="footer-text">Hecho con <i style="color:red" class="bi bi-heart-fill"></i> desde Chile!</p>
+  </footer>
+  <div id="glass-background"></div>
+  <script type="module" src="scripts/utils/dropdown.js"></script>
+  <script src="scripts/utils/responsiveNavbar.js"></script>
+  <script type="module" src="scripts/projects.js"></script>
+</body>
+</html>

@@ -13,3 +13,13 @@
 @use 'layout/simulator';
 @use 'layout/newsletter';
 @use 'layout/footer';
+
+@use 'components/section-header';
+@use 'components/project';
+@use 'components/badge';
+@use 'components/buttons';
+@use 'components/project-wrapper';
+@use 'components/dropdown';
+
+@use "pages/projects";
+@use "components/filter";

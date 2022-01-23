@@ -1,0 +1,81 @@
+@use "../helper";
+.filter-projects--expanded {
+  visibility: visible !important;
+  position: relative !important;
+  transform: translateY(0px) !important;
+  opacity: 1 !important;
+}
+
+.filter-projects {
+  position: absolute;
+  opacity: 0;
+  display: flex;
+  visibility: hidden;
+  z-index: 2;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  background-color: helper.$dark-3;
+  width: 90vw;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  margin-inline: auto;
+  margin-top: 0.5rem;
+  border-radius: 11px;
+  padding: 1rem;
+
+  @include helper.responsive(md) {
+    visibility: visible !important;
+    position: relative !important;
+    transform: translateY(0px) !important;
+    opacity: 1 !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @include helper.responsive(xl) {
+    display: flex;
+    width: 340px;
+    margin-inline: initial;
+  }
+
+  h3 {
+    align-self: center;
+    @include helper.t-black(1.2rem);
+    color: helper.$light;
+    text-transform: uppercase;
+
+    @include helper.responsive(md) {
+      display: none;
+    }
+
+    @include helper.responsive(xl) {
+      display: initial;
+    }
+  }
+}
+
+.filter-option {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  strong {
+    @include helper.t-bold(1rem);
+    color: helper.$light;
+    text-transform: uppercase;
+  }
+
+  @include helper.responsive(md) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  @include helper.responsive(xl) {
+    flex-direction: row;
+  }
+}
+
+#filter-button {
+  @include helper.responsive(md) {
+    display: none;
+  }
+}

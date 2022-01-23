@@ -1,0 +1,17 @@
+@use '../helper';
+.badge {
+  @include helper.t-medium(0.875rem);
+  color: helper.$dark;
+  background-color: helper.$dark-35;
+  padding: 0.125rem 0.5rem;
+  border-radius: 50px;
+
+  &--special {
+    background-color: #474747;
+    color: helper.$light;
+  }
+
+  &--primary {
+    background-color: helper.$primary;
+  }
+}

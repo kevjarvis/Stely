@@ -1,0 +1,78 @@
+@use "../helper";
+$width-sm: 9rem;
+$width-md: 13.9rem;
+$width-lg: 16rem;
+
+.project {
+  position: relative;
+  display: grid;
+  grid-template-areas: "project-img"
+                       "project-description";
+  width: $width-sm;
+  cursor: pointer;
+
+  @include helper.responsive(md) {
+    width: $width-md;
+  }
+
+  /*@include helper.responsive(lg) {
+    width: $width-lg;
+  }*/
+}
+
+.project-img {
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+  //height: 7.405rem;
+  width: 100%;
+  object-fit: cover;
+  height: 7rem;
+  grid-area: project-img;
+
+  @include helper.responsive(md) {
+    height: 10.25rem;
+  }
+}
+
+.project-description {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.313rem;
+  background-color: helper.$dark-3;
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
+  padding: 0.6rem;
+}
+
+.project-name {
+  @include helper.t-bold(0.9rem);
+  color: helper.$light;
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-between;
+  color: helper.$light;
+}
+
+.project-returns {
+  display: none;
+
+  @include helper.responsive(md) {
+    display: initial;
+    @include helper.t-regular(0.875rem);
+  }
+}
+
+.project-info .badge {
+  position: absolute;
+  inset: 0.25rem auto auto 0.25rem;
+
+  @include helper.responsive(md) {
+    position: initial;
+  }
+}
+
+:is(.project-investors, .project-value){
+  @include helper.t-regular(0.875rem);
+}

@@ -1,0 +1,79 @@
+@use '../helper';
+
+.dropdown-button {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.5rem;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: baseline;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border-radius: 99px;
+  @include helper.t-medium(0.9rem);
+  border: 2px solid helper.$dark-35;
+  color: helper.$dark-35;
+}
+
+.is-checked {
+  border: 2px solid helper.$primary;
+  color: helper.$primary;
+}
+
+.dropdown button:focus + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0px);
+  visibility: visible;
+}
+
+.dropdown button:focus {
+  border: 2px solid helper.$primary;
+  background-color: helper.$primary;
+  color: helper.$dark;
+}
+
+.dropdown-menu {
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #272727;
+  border-radius: 11px;
+  margin-top: 0.5rem;
+  transform: translateY(-10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu input{
+  display: none;
+}
+
+.dropdown-menu label {
+  @include helper.t-medium(0.9rem);
+  color: helper.$light;
+  padding: 0.4rem 0.7rem;
+  transition: color ease-in 0.05s;
+
+  &:hover {
+    color: darken(helper.$light, 30%)
+  }
+}
+
+.dropdown-menu label:first-of-type {
+  padding-top: 0.8rem;
+}
+
+input:checked + label {
+  color: helper.$primary;
+  &:hover {
+    color: helper.$primary;
+  }
+}
+
+.dropdown-divider {
+  height: 1px;
+  width: 90%;
+  align-self: center;
+  background-color: helper.$dark-35;
+}

@@ -1,0 +1,49 @@
+@use '../helper';
+
+.button {
+  @include helper.t-medium(1rem);
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.5rem 0.875rem;
+  background-color: #333333;
+  color: helper.$light;
+  border-radius: 50px;
+
+  &--primary {
+    background-color: helper.$primary;
+    color: helper.$dark;
+  }
+  &--secondary {
+    outline: solid 2px helper.$primary;
+    outline-offset: -2px;
+    color: helper.$primary;
+    background-color: transparent;
+  }
+  &--special {
+    background-color: helper.$light;
+    color: helper.$dark;
+  }
+}
+
+button.button--icon {
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 50%;
+  background-color: helper.$light;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+button.button--primary {
+  @include helper.t-medium(1rem);
+  background-color: helper.$primary;
+  white-space: nowrap;
+  color: helper.$dark;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0.875rem;
+  border-radius: 50px;
+}
+

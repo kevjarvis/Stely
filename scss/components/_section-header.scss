@@ -1,0 +1,31 @@
+@use "../helper";
+
+.section-heading {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-heading--title {
+  position: relative;
+  @include helper.t-black(1.35rem);
+  color: helper.$light;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -0.4rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 3px;
+    width: 60%;
+    background-color: helper.$light;
+  }
+}
+
+.section-heading--description {
+  @include helper.t-regular(1rem);
+  color: helper.$light;
+}
