@@ -1,27 +1,24 @@
+import {toggleAttr} from "./toggleAttr.js";
+
 /*NAVBAR*/
 let toggle = document.getElementById("toggle");
 let menu = document.getElementById("navmenu");
 let opacity_blur = document.getElementById("glass-background");
 let body = document.getElementsByTagName('body')[0];
 
-function toggle_nav() {
-  if (menu.classList.contains('nav-menu--collapsed')) {
-    menu.classList.remove('nav-menu--collapsed');
-    opacity_blur.classList.add('opacity-blur');
-    toggle.setAttribute('aria-expanded', 'true')
-    body.classList.add('no-scroll');
-  } else {
-    body.classList.remove('no-scroll');
-    menu.classList.add('nav-menu--collapsed');
-    opacity_blur.classList.remove('opacity-blur');
-    toggle.setAttribute('aria-expanded', 'false')
-  }
+const toggleNavbar = () => {
+  toggleAttr(
+    [menu, 'class', 'nav-menu--collapsed'],
+    [opacity_blur, 'class', 'opacity-blur'],
+    [body, 'class', 'no-scroll'],
+    [toggle, 'aria-expanded']
+  )
 }
 
 toggle.addEventListener('click', function () {
-  toggle_nav();
+  toggleNavbar()
 })
 
 opacity_blur.addEventListener('click', function () {
-  toggle_nav();
+  toggleNavbar()
 })

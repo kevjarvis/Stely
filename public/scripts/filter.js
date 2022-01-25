@@ -1,22 +1,16 @@
 import {projectObject} from "./fetchProjectData.js";
 import {filterArrayOfObjects} from "./utils/fillterArray.js";
 import {renderProjects, emptyProjects} from "./renderProjects.js";
+import {toggleAttr} from "./utils/toggleAttr.js";
 
 const filterButton = document.querySelector('#filter-button');
 const filterComponent = document.querySelector('#filter');
 
-function toggleFilter() {
-  if (filterComponent.classList.contains('filter-projects--expanded')) {
-    filterComponent.classList.remove('filter-projects--expanded');
-    filterButton.setAttribute('aria-expanded', 'false');
-  } else {
-    filterComponent.classList.add('filter-projects--expanded');
-    filterButton.setAttribute('aria-expanded', 'true');
-  }
-}
-
 filterButton.addEventListener('click', () => {
-  toggleFilter();
+  toggleAttr(
+    [filterComponent, 'class', 'filter-projects--expanded'],
+    [filterButton, 'aria-expanded']
+  )
 })
 
 const filterNovedad = listOfProjects => filterArrayOfObjects(
