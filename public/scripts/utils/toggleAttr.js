@@ -1,20 +1,18 @@
-/*Tipo de argumento
-* [element, class|attribute, value]*/
+/* toggleAttr recibe como parámetros listas como sigue:
+* [DOMElement, class|attribute, value]
+* if is attribute, dont pass a value*/
 export const toggleAttr = (...args) => {
-  function attrToggle (el, attr)  {
-    if (el.getAttribute(attr) === 'false') {
-      el.setAttribute(attr, true)
-    } else {
-      el.setAttribute(attr, false)
-    }
+  function toggleBoolean (el, attr)  {
+    const isAttrInactive= el.getAttribute(attr) === 'false';
+    el.setAttribute(attr, isAttrInactive);
   }
 
-  const preferences = new Array(...args)
-  preferences.forEach(el => {
+  const elementsForChange = new Array(...args)
+  elementsForChange.forEach(el => {
     if (el[1] === 'class') {
       el[0].classList.toggle(el[2])
     } else {
-      attrToggle(el[0], el[1])
+      toggleBoolean(el[0], el[1])
     }
   })
 }

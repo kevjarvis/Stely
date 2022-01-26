@@ -1,6 +1,6 @@
 [
   {
-    "nombre": "Droionic",
+    "name": "Droionic",
     "anual_returns": 0.12,
     "investors": 223,
     "created-year": 2020,
@@ -9,7 +9,7 @@
     "img" : "./media/droionic.jpg"
   },
   {
-    "nombre": "BioTult",
+    "name": "BioTult",
     "anual_returns": 0.06,
     "investors": 33,
     "created-year": 2022,
@@ -18,7 +18,7 @@
     "img": "./media/biotult.jpg"
   },
   {
-    "nombre": "Hübi",
+    "name": "Hübi",
     "anual_returns": 0.16,
     "investors": 1432,
     "created-year": 2018,
@@ -27,7 +27,7 @@
     "img": "./media/hubi.jpg"
   },
   {
-    "nombre": "Genetrop",
+    "name": "Genetrop",
     "anual_returns": 0.08,
     "investors": 3445,
     "created-year": 2020,
@@ -36,7 +36,7 @@
     "img": "./media/genetrop.jpg"
   },
   {
-    "nombre": "Drowinex",
+    "name": "Drowinex",
     "anual_returns": 0.21,
     "investors": 2033,
     "created-year": 2017,
@@ -45,7 +45,7 @@
     "img": "./media/drowinex.jpg"
   },
   {
-    "nombre": "Gamepol",
+    "name": "Gamepol",
     "anual_returns": 0.07,
     "investors": 341,
     "created-year": 2021,
@@ -54,7 +54,7 @@
     "img": "./media/gamepol.jpg"
   },
   {
-    "nombre": "Hujol",
+    "name": "Hujol",
     "anual_returns": 0.021,
     "investors": 112,
     "created-year": 2021,
@@ -63,7 +63,7 @@
     "img": "./media/hujol.jpg"
   },
   {
-    "nombre": "Kamel",
+    "name": "Kamel",
     "anual_returns": 0.14,
     "investors": 134,
     "created-year": 2020,

@@ -1,8 +1,8 @@
-export const filterArrayOfObjects = (array, mode, param, value) => {
+export const filterArrayOfObjects = (array, param, mode, value) => {
   const _equal = () => array.filter(item => {
     return item[param] === value;
   });
-  const _graterThan = () => array.filter(item => {
+  const _greaterThan = () => array.filter(item => {
     return item[param] >= value;
   });
   const _lessThan = () => array.filter(item => {
@@ -14,7 +14,7 @@ export const filterArrayOfObjects = (array, mode, param, value) => {
 
   const filter = {
     "equal": _equal(),
-    "graterThan": _graterThan(),
+    "greaterThan": _greaterThan(),
     "lessThan": _lessThan(),
     "between": _between()
   }

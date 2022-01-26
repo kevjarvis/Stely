@@ -37,7 +37,7 @@
         <p class="section-heading--description">Invierte en cualquiera desde $1</p>
       </div>
       <div id="project-container" class="projects-container">
-        <button id="filter-button" class="button--primary">FILTRO <i class="bi bi-funnel-fill"></i></button>
+        <button id="filter-button" class="button--primary" aria-expanded="false">FILTRO <i class="bi bi-funnel-fill"></i></button>
         <div id="filter" class="filter-projects">
           <h3>Filtro</h3>
           <div class="filter-option">
@@ -50,15 +50,15 @@
 
               <form action="#" class="dropdown-menu">
 
-                <input type="radio" id="novedad-none" name="novedad" value="none" checked>
+                <input type="radio" id="novedad-none" name="novelty" value="none" checked>
                 <label for="novedad-none">Todos</label>
 
                 <div class="dropdown-divider"></div>
 
-                <input type="radio" id="lo-mas-nuevo" name="novedad" value="new-projects">
+                <input type="radio" id="lo-mas-nuevo" name="novelty" value="newProjects">
                 <label for="lo-mas-nuevo">Lo más nuevo</label>
 
-                <input type="radio" id="mas-innovadores" name="novedad" value="most-innovative">
+                <input type="radio" id="mas-innovadores" name="novelty" value="mostInnovative">
                 <label for="mas-innovadores">Más innovadores</label>
               </form>
             </div>
@@ -68,9 +68,9 @@
             <strong>Riesgo</strong>
             <div id="filter-risk" class="dropdown">
               <button class="dropdown-button" type="button">
-                                                         <span></span>
-                                                         <i class="bi bi-caret-down-fill"></i>
-                                                         </button>
+                <span></span>
+                <i class="bi bi-caret-down-fill"></i>
+              </button>
 
               <form action="#" class="dropdown-menu">
 
@@ -79,13 +79,13 @@
 
                 <div class="dropdown-divider"></div>
 
-                <input type="radio" id="riesgo-alto" name="risk" value="high-risk">
+                <input type="radio" id="riesgo-alto" name="risk" value="high">
                 <label for="riesgo-alto">Alto</label>
 
-                <input type="radio" id="riesgo-medio" name="risk" value="medium-risk">
+                <input type="radio" id="riesgo-medio" name="risk" value="medium">
                 <label for="riesgo-medio">Medio</label>
 
-                <input type="radio" id="riesgo-bajo" name="risk" value="low-risk">
+                <input type="radio" id="riesgo-bajo" name="risk" value="low">
                 <label for="riesgo-bajo">Bajo</label>
               </form>
             </div>
@@ -106,13 +106,13 @@
 
                 <div class="dropdown-divider"></div>
 
-                <input type="radio" id="menos-100" name="investors" value="minus-100">
+                <input type="radio" id="menos-100" name="investors" value="lessThan100">
                 <label for="menos-100">menos de  100</label>
 
-                <input type="radio" id="entre100-500" name="investors" value="between100-500">
+                <input type="radio" id="entre100-500" name="investors" value="between100And500">
                 <label for="entre100-500">Entre 100 y 500</label>
 
-                <input type="radio" id="mayor-500" name="investors" value="more-than-500">
+                <input type="radio" id="mayor-500" name="investors" value="greaterThan500">
                 <label for="mayor-500">Mayor a 500</label>
               </form>
             </div>
@@ -133,6 +133,6 @@
   <div id="glass-background"></div>
   <script type="module" src="scripts/utils/dropdown.js"></script>
   <script type="module" src="scripts/utils/responsiveNavbar.js"></script>
-  <script type="module" src="scripts/projects.js"></script>
+  <script type="module" src="scripts/projectPage.js"></script>
 </body>
 </html>
