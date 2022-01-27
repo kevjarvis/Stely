@@ -6,7 +6,7 @@
     "created-year": 2020,
     "innovative": true,
     "risk": "medium",
-    "img" : "./media/droionic.jpg"
+    "img" : "./media/projects/droionic"
   },
   {
     "name": "BioTult",
@@ -15,7 +15,7 @@
     "created-year": 2022,
     "innovative": true,
     "risk": "low",
-    "img": "./media/biotult.jpg"
+    "img": "./media/projects/biotult"
   },
   {
     "name": "Hübi",
@@ -24,7 +24,7 @@
     "created-year": 2018,
     "innovative": true,
     "risk": "high",
-    "img": "./media/hubi.jpg"
+    "img": "./media/projects/hubi"
   },
   {
     "name": "Genetrop",
@@ -33,7 +33,7 @@
     "created-year": 2020,
     "innovative": false,
     "risk": "low",
-    "img": "./media/genetrop.jpg"
+    "img": "./media/projects/genetrop"
   },
   {
     "name": "Drowinex",
@@ -42,7 +42,7 @@
     "created-year": 2017,
     "innovative": false,
     "risk": "high",
-    "img": "./media/drowinex.jpg"
+    "img": "./media/projects/drowinex"
   },
   {
     "name": "Gamepol",
@@ -51,7 +51,7 @@
     "created-year": 2021,
     "innovative": false,
     "risk": "low",
-    "img": "./media/gamepol.jpg"
+    "img": "./media/projects/gamepol"
   },
   {
     "name": "Hujol",
@@ -60,7 +60,7 @@
     "created-year": 2021,
     "innovative": false,
     "risk": "medium",
-    "img": "./media/hujol.jpg"
+    "img": "./media/projects/hujol"
   },
   {
     "name": "Kamel",
@@ -69,6 +69,6 @@
     "created-year": 2020,
     "innovative": true,
     "risk": "high",
-    "img": "./media/kamel.jpg"
+    "img": "./media/projects/kamel"
   }
 ]
