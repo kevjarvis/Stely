@@ -10,10 +10,7 @@ toggleFilter();
 loadFilter();
 
 const CAPITAL_KEY_LOCALSTORAGE = "capital";
-const STARTER_CAPITAL = 100000;
 
-const isInLocalstorage = key => !!localStorage.getItem(key);
-const setCapitalLocally = () => localStorage.setItem(CAPITAL_KEY_LOCALSTORAGE, STARTER_CAPITAL);
 const getCapital = () => localStorage.getItem(CAPITAL_KEY_LOCALSTORAGE);
 const updateCapitalElement = element => element.innerText = getCapital();
 const reduceEquityIn = (amount) => localStorage.setItem(
@@ -21,12 +18,8 @@ const reduceEquityIn = (amount) => localStorage.setItem(
   JSON.stringify(getCapital() - amount)
 )
 
-const hasCapitalStored = isInLocalstorage(CAPITAL_KEY_LOCALSTORAGE);
-const hasInvestmentsStored = isInLocalstorage('investments');
 const capitalElements = [...document.querySelectorAll('[stely-capital]')];
 
-(!hasInvestmentsStored) ? localStorage.setItem('investments', '[]') : null;
-(!hasCapitalStored) ? setCapitalLocally(): null;
 capitalElements.forEach(updateCapitalElement);
 
 /*Proceso de inversion*/

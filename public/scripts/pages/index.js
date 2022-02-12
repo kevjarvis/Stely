@@ -40,6 +40,21 @@ window.onscroll = () => {
   changeComponentsOnScroll(referenceElement, handleStatesSimulator);
 };
 
+
+const CAPITAL_KEY_LOCALSTORAGE = "capital";
+const STARTER_CAPITAL = 100000;
+
+const isInLocalstorage = key => !!localStorage.getItem(key);
+const setCapitalLocally = () => localStorage.setItem(CAPITAL_KEY_LOCALSTORAGE, STARTER_CAPITAL);
+
+const hasCapitalStored = isInLocalstorage(CAPITAL_KEY_LOCALSTORAGE);
+const hasInvestmentsStored = isInLocalstorage('investments');
+
+(!hasInvestmentsStored) ? localStorage.setItem('investments', '[]') : null;
+(!hasCapitalStored) ? setCapitalLocally(): null;
+
+updateCapital();
+
 const newsletterButton = document.querySelector('.newsletter-form button');
 newsletterButton.addEventListener('click', e => {
   e.preventDefault();
