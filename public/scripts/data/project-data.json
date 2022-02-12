@@ -1,6 +1,7 @@
 [
   {
     "name": "Droionic",
+    "description": "Sociedad fundada en 2020 poniendo foco en la construcción y manejo tecnológico de drones en múltiples industrias. Se especializa en tecnología para controles policiales, industria ganadera e investigación y prevención de incendios forestales alrededor del mundo.",
     "anual_returns": 0.12,
     "investors": 223,
     "created-year": 2020,
@@ -10,6 +11,7 @@
   },
   {
     "name": "BioTult",
+    "description" : "BioTult es una startup de Argentina que se enfoca en seguridad y análisis biológico que presta servicios para laboratorios disruptivos en todo el mundo",
     "anual_returns": 0.06,
     "investors": 33,
     "created-year": 2022,
@@ -18,7 +20,8 @@
     "img": "./media/projects/biotult"
   },
   {
-    "name": "Hübi",
+    "name": "Hubi",
+    "description": "Fundada en 2018 Hubi es un proyecto que ha encontrado el product-market fit desarrollando aplicaciones con tecnología serverless y servicios en la nube",
     "anual_returns": 0.16,
     "investors": 1432,
     "created-year": 2018,
@@ -28,6 +31,7 @@
   },
   {
     "name": "Genetrop",
+    "description": "Genetrop es una empresa reciente fundada para solucionar problemas en el ámbito electrónico, se especializa en la construcción de placas personalizadas para proyectos desde pequeña a gran envergadura",
     "anual_returns": 0.08,
     "investors": 3445,
     "created-year": 2020,
@@ -37,6 +41,7 @@
   },
   {
     "name": "Drowinex",
+    "description": "Drowinex es una startup de robótica para ayudar a empresas y particulares a dar inteligencia a sus hogares y empresas haciendo uso de IoT. Tambien desarrolla robots para uso logístico.",
     "anual_returns": 0.21,
     "investors": 2033,
     "created-year": 2017,
@@ -46,6 +51,7 @@
   },
   {
     "name": "Gamepol",
+    "description": "Empresa reciente fundada en 2021, su actividad económica es el desarrollo de videojuegos y artículos para los mismos poniendo foco en la inclusión y accesibilidad",
     "anual_returns": 0.07,
     "investors": 341,
     "created-year": 2021,
@@ -55,15 +61,17 @@
   },
   {
     "name": "Hujol",
+    "description": "Hujol es una startup disruptiva del año 2021 que utiliza el Litio para la generación de energía limpia para ser utilizada para vehículos eléctricos particulares.",
     "anual_returns": 0.021,
     "investors": 112,
     "created-year": 2021,
-    "innovative": false,
+    "innovative": true,
     "risk": "medium",
     "img": "./media/projects/hujol"
   },
   {
     "name": "Kamel",
+    "description": "Kamel es la nueva forma de dar electricidad a los hogares de Latinoamérica haciendo uso de paneles solares de alta recepción contando con baterías de larga duración y gran capacidad de almacenamiento",
     "anual_returns": 0.14,
     "investors": 134,
     "created-year": 2020,

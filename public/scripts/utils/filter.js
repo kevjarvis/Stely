@@ -1,5 +1,5 @@
 import {projectList} from "./projectData.js";
-import {toggleAttr} from "./utils/toggleAttr.js";
+import {toggleAttr} from "./toggleAttr.js";
 import {FilterByNovelty, FilterByRisk, FilterByInvestors} from "./filters.js";
 import {renderProjects} from "./render.js";
 
@@ -19,7 +19,7 @@ export const loadFilter = () => {
   const elFilterInputs = document.querySelectorAll('#filter input')
   elFilterComponent.addEventListener('change', () => {
 
-    // en mapping se guardarán solo los inputs que estén checked
+    // en mapping se guardarán solo los dropdowns que estén checked
     // input.name : input.value
     const mapping = {}
 

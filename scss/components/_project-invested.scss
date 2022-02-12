@@ -1,0 +1,31 @@
+#investments {
+  width: 70vw;
+  margin-inline: auto;
+  min-height: 60vh;
+}
+
+.uk-card {
+  border-radius: 11px;
+  padding: 1rem;
+  background-color: #1E1E1E;
+  margin-block: 1rem;
+}
+
+.uk-card-title {
+  color: white;
+}
+
+.uk-card button {
+  font-size: 2rem;
+  color: rgba(200, 62, 77, 1);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+}
+
+#no-find-message {
+  color: whitesmoke !important;
+}

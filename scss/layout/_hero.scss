@@ -27,7 +27,7 @@
   flex-flow: row nowrap;
   align-items: center;
   gap: 0.5rem;
-  text-decoration: none;
+  text-decoration: none !important;
   padding: 0.83rem 2rem;
   border-radius: 58px;
   color: helper.$dark;
@@ -40,6 +40,7 @@
   &:hover {
     background-color: helper.$primary;
     transition: background-color 0.7s;
+    color: helper.$dark;
   }
 
   @include helper.responsive(md) {

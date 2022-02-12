@@ -1,6 +1,3 @@
-const filter1 = document.querySelector('#filter1');
-const filter2 = document.querySelector('#filter2');
-
 function dropdown(element, default_option) {
   const dropdownButton = element.children[0];
   const dropdownMenu = element.children[1];

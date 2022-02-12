@@ -1,4 +1,4 @@
-import {filterArrayOfObjects} from "./utils/filterArrayOfObjects.js";
+import {filterArrayOfObjects} from "./filterArrayOfObjects.js";
 
 class Filter {
   static none (array) {

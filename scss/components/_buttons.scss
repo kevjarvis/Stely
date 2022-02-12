@@ -2,12 +2,16 @@
 
 .button {
   @include helper.t-medium(1rem);
-  text-decoration: none;
+  text-decoration: none !important;
   cursor: pointer;
   padding: 0.5rem 0.875rem;
   background-color: #333333;
   color: helper.$light;
   border-radius: 50px;
+
+  &:hover {
+    color: black;
+  }
 
   &--primary {
     background-color: helper.$primary;

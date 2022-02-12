@@ -1,0 +1,43 @@
+@use "../helper";
+
+.popup {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  background-color: helper.$dark-3;
+  border-radius: 11px;
+  width: 40vw;
+  padding: 20px;
+}
+
+.popup-close {
+  position: absolute;
+  inset: -2rem 0 auto auto;
+  outline: none;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  background-color: #C4C4C4;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+
+  &:before, &:after {
+    position: absolute;
+    content: '';
+    height: 2.06px;
+    width: 14.58px;
+    margin:auto;
+    inset: 0;
+    background-color: #2F2F2F;
+    border-radius: 999px;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+}

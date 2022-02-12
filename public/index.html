@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Proza+Libre:wght@800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   <script src="https://kit.fontawesome.com/acb2c545b2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/css/uikit.min.css" />
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body id="landing">
@@ -23,10 +24,8 @@
       <ul id="navmenu" class="nav-menu nav-menu--collapsed">
         <li class="navitem"><a href="#" class="navlink navlink--active">Inicio</a></li>
         <li class="navitem"><a href="projects.html" class="navlink">Proyectos</a></li>
-        <li class="navitem"><a href="#" class="navlink">Acerca de</a></li>
-
-        <li class="navitem"><a href="#" class="navlink">Ingresar</a></li>
-        <li class="navitem"><a href="#" class="navlink">Registrarse</a></li>
+        <li class="navitem"><a href="inversiones.html" class="navlink">Mis inversiones</a></li>
+        <li class="navitem"><span class="nav-indicator">Capital: $<span stely-capital></span></span></li>
       </ul>
     </nav>
   </header>
@@ -65,8 +64,6 @@
           <p class="simulator-text simulator-text--info">Sigue bajando para continuar <i class="fas fa-chevron-down"></i></p>
         </div>
 
-        <!--review: en vez de hacer una única clase context podría hacer un mixin y aplicar el principio de
-        responsabilidad única.-->
         <div class="simulator-context">
           <!--Aquí dentro los componentes del simulador-->
           <form action="#" class="simulator-form">
@@ -76,7 +73,6 @@
               <label class="simulator-label" for="capital">¿Cuanto quieres invertir?</label>
 
               <div class="simulator-input">
-                <!--A este lo trato como un solo componente-->
                 <span>$</span>
                 <input  id="capital" name="capital" placeholder="100.000">
               </div>
@@ -133,7 +129,11 @@
     <p class="footer-text">Hecho con <i style="color:red" class="bi bi-heart-fill"></i> desde Chile!</p>
   </footer>
 
-  <script src="scripts/index.js" type="module"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit-icons.min.js"></script>
+
+  <script type="module" src="scripts/pages/index.js"></script>
   <script type="module" src="scripts/utils/responsiveNavbar.js"></script>
 </body>
 </html>

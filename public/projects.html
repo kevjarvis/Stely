@@ -8,11 +8,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Proza+Libre:wght@800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   <script src="https://kit.fontawesome.com/acb2c545b2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/css/uikit.min.css" />
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
   <header class="banner">
-    <a href="#" class="logo">Stely</a>
+    <a href="index.html" class="logo">Stely</a>
 
     <nav class="navbar" role="navigation">
       <button class="burger-button" id="toggle" aria-expanded="false">
@@ -23,10 +24,8 @@
       <ul id="navmenu" class="nav-menu nav-menu--collapsed">
         <li class="navitem"><a href="index.html" class="navlink">Inicio</a></li>
         <li class="navitem"><a href="#" class="navlink navlink--active">Proyectos</a></li>
-        <li class="navitem"><a href="#" class="navlink">Acerca de</a></li>
-
-        <li class="navitem"><a href="#" class="navlink">Ingresar</a></li>
-        <li class="navitem"><a href="#" class="navlink">Registrarse</a></li>
+        <li class="navitem"><a href="inversiones.html" class="navlink">Mis inversiones</a></li>
+        <li class="navitem"><span class="nav-indicator">Capital: $<span stely-capital></span></span></li>
       </ul>
     </nav>
   </header>
@@ -120,19 +119,42 @@
 
         </div>
         <div id="all-projects" class="all-projects"></div>
-
+        <div id="modal-full" class="uk-modal-full" uk-modal >
+          <div class="uk-modal-dialog" uk-height-viewport>
+            <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+            <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+              <div class="uk-background-cover" style="background-image: url('media');"></div>
+              <div class="uk-padding-large" >
+                <strong>Capital disponible: $<span stely-capital>100.000</span></strong>
+                <h1></h1>
+                <p></p>
+                <form id="invest-form" class="uk-flex uk-flex-column uk-margin" style="align-items: flex-start; gap: 0.5rem" action="#">
+                  <label for="cap-invest">Capital a invertir: </label>
+                  <div class="uk-inline">
+                    <i class="bi bi-currency-dollar uk-form-icon"></i>
+                    <input id="cap-invest" class="uk-input" type="text" placeholder="100.000">
+                  </div>
+                  <button id="invest-button" class="uk-button uk-button-primary">Invertir</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
   </main>
 
   <footer id="footer">
-    <a href="#" class="logo">Stely</a>
+    <a href="index.html" class="logo">Stely</a>
     <p class="footer-text">Hecho con <i style="color:red" class="bi bi-heart-fill"></i> desde Chile!</p>
   </footer>
   <div id="glass-background"></div>
   <script type="module" src="scripts/utils/dropdown.js"></script>
   <script type="module" src="scripts/utils/responsiveNavbar.js"></script>
-  <script type="module" src="scripts/projectPage.js"></script>
+  <script type="module" src="scripts/pages/projectPage.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit-icons.min.js"></script>
 </body>
 </html>

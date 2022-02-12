@@ -1,5 +1,7 @@
 export const Project  = (img, projectName, anualReturns, investors) => {
-  return `<article class="project">
+  const normalizeAnualReturns = (Number(anualReturns)*100).toFixed(0);
+
+  return `<article class="project" href="#modal-full" uk-toggle>
             <picture class="project-img">
               <source media="(min-width: 768px)" srcset="${img}@desktop.jpg">
               <img class="project-img" src="${img}@mobile.jpg" alt="">
@@ -8,7 +10,7 @@ export const Project  = (img, projectName, anualReturns, investors) => {
               <span class="project-name">${projectName}</span>
               <div class="project-info">
                 <p class="project-returns">Retornos anuales</p>
-                <span class="badge badge--special">~ ${(Number(anualReturns) * 100).toFixed(0)}%</span>
+                <span class="badge badge--special">~ ${normalizeAnualReturns}%</span>
               </div>
               <div class="project-info">
                 <p class="project-investors">Inversores</p>
@@ -17,7 +19,6 @@ export const Project  = (img, projectName, anualReturns, investors) => {
             </div>
           </article>
           <div class="project-actions">
-            <button class="button--primary">Detalles</button>
-            <button class="button--icon"><img src="media/cart-plus-fill.svg" alt=""></button>
+            <button class="button--primary" href="#modal-full" uk-toggle>Invertir</button>
           </div>`
 }

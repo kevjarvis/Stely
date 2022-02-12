@@ -1,4 +1,4 @@
-import {updateTextOfElement} from "./utils/helper.js";
+import {updateTextOfElement} from "./helper.js";
 import {RETURNS_COMPONENT} from "./handleStates.js";
 
 function checkRisk(riskOptions) {

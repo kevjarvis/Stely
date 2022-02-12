@@ -2,6 +2,7 @@
 
 .navbar {
   margin-left: auto;
+  display: flex;
   z-index: 9;
 }
 
@@ -111,7 +112,7 @@
 }
 
 .navitem {
-  :not(.navlink--active) {
+  :not(.navlink--active, .nav-indicator, .nav-indicator span) {
     &:hover {
       color: darken(helper.$light, 30%);
       transition: color 0.5s;
@@ -126,11 +127,22 @@
       }
     }
   }
+}
 
+.nav-indicator {
+  color: helper.$light;
+  @include helper.t-black(1.3rem);
+  padding: 0.6rem 0.5rem;
+  cursor: default;
+
+  @include helper.responsive(md) {
+    font-weight: 600;
+    font-size: 1rem;
+  }
 }
 
 .navlink {
-  text-decoration: none;
+  text-decoration: none !important;
   color: helper.$light;
   $fz: 1.3rem;
   @include helper.t-black($fz);
@@ -139,13 +151,11 @@
   @include helper.responsive(md) {
     font-weight: 600;
     font-size: 1rem;
-
-
   }
 
   /*Links activos*/
   &--active {
-    color: helper.$primary;
+    color: helper.$primary !important;
   }
 
 }

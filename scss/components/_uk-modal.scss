@@ -1,0 +1,7 @@
+@use "../helper";
+.uk-background-cover {
+  height: 30vh;
+  @include helper.responsive(md) {
+    height: 100vh;
+  }
+}

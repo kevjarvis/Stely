@@ -7,6 +7,10 @@
   text-decoration: none;
   color: helper.$light;
 
+  &:hover {
+    color: helper.$light !important;
+    text-decoration: none;
+  }
 
   &:before {
     position: absolute;

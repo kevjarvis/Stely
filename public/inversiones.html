@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis inversiones | Stely</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Proza+Libre:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <script src="https://kit.fontawesome.com/acb2c545b2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/css/uikit.min.css" />
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+<header class="banner">
+  <a href="index.html" class="logo">Stely</a>
+
+  <nav class="navbar" role="navigation">
+    <button class="burger-button" id="toggle" aria-expanded="false">
+      <span class="burger-text">Menu</span>
+      <span class="nav-burgerbars"></span>
+    </button>
+
+    <ul id="navmenu" class="nav-menu nav-menu--collapsed">
+      <li class="navitem"><a href="index.html" class="navlink">Inicio</a></li>
+      <li class="navitem"><a href="projects.html" class="navlink">Proyectos</a></li>
+      <li class="navitem"><a href="#" class="navlink navlink--active">Mis inversiones</a></li>
+      <li class="navitem"><span class="nav-indicator">Capital: $<span stely-capital></span></span></li>
+    </ul>
+  </nav>
+</header>
+<main>
+<section id="investments">
+  <h1 style="color: whitesmoke">Mis inversiones</h1>
+  <h3 id="no-find-message">Tus inversiones se mostrarán aquí, ahora no tienes ninguna.</h3>
+</section>
+</main>
+<footer id="footer">
+  <a href="index.html" class="logo">Stely</a>
+  <p class="footer-text">Hecho con <i style="color:red" class="bi bi-heart-fill"></i> desde Chile!</p>
+</footer>
+<div id="glass-background"></div>
+
+<script type="module" src="scripts/pages/investments.js"></script>
+<script type="module" src="scripts/utils/responsiveNavbar.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit-icons.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+@use '../helper';
+.details-img {
+  width: 112px;
+  height: 116px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.details {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1.9rem;
+}
+
+.details-main {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.9375rem;
+}
+
+.details-body {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.9375rem;
+}
+
+.details-description {
+  color: helper.$light;
+  strong {
+    @include helper.t-semibold(16px);
+  }
+  p {
+    @include helper.t-regular(15px);
+  }
+}
+
+.details-prop {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.625rem;
+  align-items: center;
+
+  i, strong {
+    @include helper.t-semibold(16px);
+    color: #9D9D9D;
+  }
+
+  span {
+    @include helper.t-regular(16px);
+    color: helper.$light;
+  }
+}
+
+.details-actions {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  align-self: flex-end;
+}
