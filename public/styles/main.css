@@ -21,7 +21,7 @@
 }
 
 body {
-  background-color: #191919;
+  background-color: rgb(25, 25, 25);
 }
 
 * {
@@ -36,7 +36,7 @@ p {
 
 html {
   scroll-behavior: smooth;
-  background-color: #191919;
+  background-color: rgb(25, 25, 25);
 }
 
 .navbar {
@@ -73,7 +73,7 @@ html {
   .nav-menu:after {
     position: absolute;
     content: "";
-    background: linear-gradient(180deg, #42b63e 30%, #2364aa 80%);
+    background: linear-gradient(180deg, rgb(66, 182, 62) 30%, rgb(35, 100, 170) 80%);
     opacity: 70%;
     width: 10rem;
     height: 10rem;
@@ -167,14 +167,14 @@ html {
 @media (min-width: 768px) {
   .navitem :not(.navlink--active, .nav-indicator, .nav-indicator span):hover {
     background-color: #333333;
-    color: #eef0f2;
+    color: rgb(238, 240, 242);
     border-radius: 5px;
     transition: background-color 0.5s;
   }
 }
 
 .nav-indicator {
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-size: 1.3rem;
@@ -191,7 +191,7 @@ html {
 
 .navlink {
   text-decoration: none !important;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-size: 1.3rem;
@@ -206,7 +206,7 @@ html {
   }
 }
 .navlink--active {
-  color: #edc643 !important;
+  color: rgb(237, 198, 67) !important;
 }
 
 /* Burger menu */
@@ -239,7 +239,7 @@ html {
   display: inline-block;
   width: 20px;
   height: 3px;
-  background-color: #eef0f2;
+  background-color: rgb(238, 240, 242);
   border-radius: 20px;
 }
 .nav-burgerbars:before {
@@ -270,7 +270,7 @@ html {
   background-color: h.$dark;
 }*/
 .banner {
-  background-color: #191919;
+  background-color: rgb(25, 25, 25);
   display: flex;
   flex-flow: row nowrap;
   padding: 0.8rem 1.5rem;
@@ -300,10 +300,10 @@ html {
   font-family: "Proza Libre", sans-serif;
   font-size: 1.5rem;
   text-decoration: none;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
 }
 .logo:hover {
-  color: #eef0f2 !important;
+  color: rgb(238, 240, 242) !important;
   text-decoration: none;
 }
 .logo:before {
@@ -311,7 +311,7 @@ html {
   content: "";
   width: 6px;
   height: 6px;
-  background-color: #eef0f2;
+  background-color: rgb(238, 240, 242);
   border-radius: 50%;
   top: 0;
   left: 3.33rem;
@@ -344,14 +344,14 @@ html {
   font-style: normal;
   font-size: 1.7rem;
   font-weight: 900;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
   text-align: center;
   max-width: 70%;
   align-self: center;
   padding-top: 2rem;
 }
 .hero-title--accent {
-  color: #edc643;
+  color: rgb(237, 198, 67);
 }
 @media (min-width: 1200px) {
   .hero-title {
@@ -372,20 +372,20 @@ html {
   text-decoration: none !important;
   padding: 0.83rem 2rem;
   border-radius: 58px;
-  color: #191919;
+  color: rgb(25, 25, 25);
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-size: 1.1rem;
   font-weight: 700;
-  background-color: #eef0f2;
+  background-color: rgb(238, 240, 242);
   text-transform: uppercase;
   margin-inline: auto;
   transition: background-color 0.4s;
 }
 .hero-cta:hover {
-  background-color: #edc643;
+  background-color: rgb(237, 198, 67);
   transition: background-color 0.7s;
-  color: #191919;
+  color: rgb(25, 25, 25);
 }
 @media (min-width: 768px) {
   .hero-cta {
@@ -431,7 +431,7 @@ html {
   position: absolute;
   content: "";
   height: 6rem;
-  border-left: dashed 2px #eef0f2;
+  border-left: dashed 2px rgb(238, 240, 242);
   inset: -6rem 50%;
   transform: translate(-50%, 0);
 }
@@ -439,7 +439,7 @@ html {
   .review:before {
     height: 0;
     width: 8rem;
-    border-top: dashed 2px #eef0f2;
+    border-top: dashed 2px rgb(238, 240, 242);
     left: -8rem;
     top: 50%;
     transform: translate(0, -50%);
@@ -455,7 +455,7 @@ html {
   left: 50%;
   transform: translate(-50%, 0);
   border-radius: 50%;
-  background-color: #42b63e;
+  background-color: rgb(66, 182, 62);
   filter: blur(4rem);
   opacity: 70%;
 }
@@ -474,7 +474,7 @@ html {
   font-style: normal;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
   margin-right: 0.5rem;
 }
 
@@ -506,7 +506,7 @@ html {
   font-style: normal;
   font-size: 1rem;
   font-weight: 700;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
   text-align: center;
   max-width: 90%;
   padding-block: 2rem;
@@ -518,13 +518,13 @@ html {
   }
 }
 .section-text--pink {
-  color: #ec0eff;
+  color: rgb(236, 14, 255);
 }
 .section-text--blue {
-  color: #3562ff;
+  color: rgb(53, 98, 255);
 }
 .section-text--green {
-  color: #58ff0a;
+  color: rgb(88, 255, 10);
 }
 .section-text--xl {
   font-size: 1.5rem;
@@ -566,12 +566,12 @@ html {
   font-style: normal;
   font-size: 1.3rem;
   font-weight: 700;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
   margin-left: 1rem;
   padding-block: 1.2rem;
 }
 .section-subtitle--pink {
-  color: #edc643;
+  color: rgb(237, 198, 67);
 }
 
 #newsletter .section-subtitle {
@@ -591,8 +591,8 @@ html {
 
 .simulator-header {
   position: relative;
-  background-color: #191919;
-  border: solid 1px #191919;
+  background-color: rgb(25, 25, 25);
+  border: solid 1px rgb(25, 25, 25);
   padding: 0.8rem;
   z-index: 9;
 }
@@ -608,7 +608,7 @@ html {
   font-style: normal;
   font-size: 1.7rem;
   font-weight: 900;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
   text-align: center;
   z-index: 9;
 }
@@ -707,7 +707,7 @@ html {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  background: linear-gradient(180deg, #edc643, #42b63e);
+  background: linear-gradient(180deg, rgb(237, 198, 67), rgb(66, 182, 62));
   filter: blur(5rem);
   z-index: -1;
 }
@@ -728,7 +728,7 @@ html {
   font-style: normal;
   font-size: 1.5rem;
   font-weight: 900;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
   text-align: center;
 }
 .simulator-text--info {
@@ -750,7 +750,7 @@ html {
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
 }
 
 .simulator-input :is(span, input) {
@@ -769,11 +769,10 @@ html {
 }
 
 .simulator-input input {
-  -moz-appearance: textfield;
-  /* Firefox */
+  -moz-appearance: textfield; /* Firefox */
   width: 15rem;
   border: hidden;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
 }
 .simulator-input input:focus {
   outline: none;
@@ -783,7 +782,7 @@ html {
 }
 
 .simulator-input span {
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
 }
 
 .simulator-switch {
@@ -799,12 +798,12 @@ html {
   overflow: hidden;
 }
 .simulator-switch input:checked + label {
-  background-color: #eef0f2;
-  color: #191919;
+  background-color: rgb(238, 240, 242);
+  color: rgb(25, 25, 25);
 }
 .simulator-switch label {
   background-color: transparent;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-size: 1rem;
@@ -814,7 +813,7 @@ html {
   text-align: center;
   padding: 0.83rem 1.3rem;
   margin-right: -1px;
-  border: solid 1px #eef0f2;
+  border: solid 1px rgb(238, 240, 242);
   transition: all 0.1s ease-in-out;
 }
 .simulator-switch label:hover {
@@ -860,7 +859,7 @@ html {
   font-size: 1.3rem;
   font-weight: 700;
   background-color: transparent;
-  color: #edc643;
+  color: rgb(237, 198, 67);
 }
 
 .newsletter-section {
@@ -877,7 +876,7 @@ html {
   font-style: normal;
   font-size: 1.7rem;
   font-weight: 900;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
 }
 
 .newsletter-text {
@@ -885,12 +884,12 @@ html {
   font-style: normal;
   font-size: 1rem;
   font-weight: 500;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
   text-align: center;
   max-width: 70%;
 }
 .newsletter-text--accent {
-  color: #edc643;
+  color: rgb(237, 198, 67);
 }
 
 .btn {
@@ -901,19 +900,19 @@ html {
   text-decoration: none !important;
   padding: 0.83rem 2rem;
   border-radius: 58px;
-  color: #191919;
+  color: rgb(25, 25, 25);
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-size: 1.1rem;
   font-weight: 700;
-  background-color: #edc643;
+  background-color: rgb(237, 198, 67);
   text-transform: uppercase;
   margin-inline: auto;
   transition: background-color 0.4s;
 }
 .btn:hover {
-  background-color: #eef0f2;
-  color: #191919;
+  background-color: rgb(238, 240, 242);
+  color: rgb(25, 25, 25);
   transition: background-color 0.7s;
 }
 @media (min-width: 768px) {
@@ -927,10 +926,10 @@ html {
   font-style: normal;
   font-size: 1.3rem;
   font-weight: 900;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
 }
 .newsletter-subtitle--accent {
-  color: #edc643;
+  color: rgb(237, 198, 67);
 }
 
 .newsletter-form {
@@ -943,7 +942,7 @@ html {
   font-style: normal;
   font-size: 1rem;
   font-weight: 400;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
 }
 .newsletter-form div {
   position: relative;
@@ -971,9 +970,9 @@ html {
   font-style: normal;
   font-size: 1rem;
   font-weight: 400;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
   border-radius: 58px;
-  border: solid 2px #edc643;
+  border: solid 2px rgb(237, 198, 67);
   padding-right: 8rem;
   width: 100%;
 }
@@ -986,13 +985,13 @@ html {
   cursor: pointer;
   padding: 0.81rem 1.5rem;
   border-radius: 58px;
-  border: solid 2px #edc643;
-  color: #191919;
+  border: solid 2px rgb(237, 198, 67);
+  color: rgb(25, 25, 25);
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-size: 1.1rem;
   font-weight: 700;
-  background-color: #edc643;
+  background-color: rgb(237, 198, 67);
   text-transform: uppercase;
 }
 
@@ -1003,7 +1002,7 @@ html {
   flex-flow: column nowrap;
   align-items: flex-start;
   gap: 0.4rem;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
   padding: 1rem;
 }
 
@@ -1028,7 +1027,7 @@ html {
   font-style: normal;
   font-size: 1.35rem;
   font-weight: 900;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
 }
 .section-heading--title:after {
   content: "";
@@ -1038,7 +1037,7 @@ html {
   transform: translate(-50%, 0);
   height: 3px;
   width: 60%;
-  background-color: #eef0f2;
+  background-color: rgb(238, 240, 242);
 }
 
 .section-heading--description {
@@ -1046,7 +1045,7 @@ html {
   font-style: normal;
   font-size: 1rem;
   font-weight: 400;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
 }
 
 .project {
@@ -1094,13 +1093,13 @@ html {
   font-style: normal;
   font-size: 0.9rem;
   font-weight: 700;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
 }
 
 .project-info {
   display: flex;
   justify-content: space-between;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
 }
 
 .project-returns {
@@ -1138,17 +1137,17 @@ html {
   font-style: normal;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #191919;
+  color: rgb(25, 25, 25);
   background-color: #727272;
   padding: 0.125rem 0.5rem;
   border-radius: 50px;
 }
 .badge--special {
   background-color: #474747;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
 }
 .badge--primary {
-  background-color: #edc643;
+  background-color: rgb(237, 198, 67);
 }
 
 .button {
@@ -1160,32 +1159,32 @@ html {
   cursor: pointer;
   padding: 0.5rem 0.875rem;
   background-color: #333333;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
   border-radius: 50px;
 }
 .button:hover {
   color: black;
 }
 .button--primary {
-  background-color: #edc643;
-  color: #191919;
+  background-color: rgb(237, 198, 67);
+  color: rgb(25, 25, 25);
 }
 .button--secondary {
-  outline: solid 2px #edc643;
+  outline: solid 2px rgb(237, 198, 67);
   outline-offset: -2px;
-  color: #edc643;
+  color: rgb(237, 198, 67);
   background-color: transparent;
 }
 .button--special {
-  background-color: #eef0f2;
-  color: #191919;
+  background-color: rgb(238, 240, 242);
+  color: rgb(25, 25, 25);
 }
 
 button.button--icon {
   width: 2.35rem;
   height: 2.35rem;
   border-radius: 50%;
-  background-color: #eef0f2;
+  background-color: rgb(238, 240, 242);
   outline: none;
   border: none;
   cursor: pointer;
@@ -1196,9 +1195,9 @@ button.button--primary {
   font-style: normal;
   font-size: 1rem;
   font-weight: 500;
-  background-color: #edc643;
+  background-color: rgb(237, 198, 67);
   white-space: nowrap;
-  color: #191919;
+  color: rgb(25, 25, 25);
   outline: none;
   border: none;
   cursor: pointer;
@@ -1249,8 +1248,8 @@ button.button--primary {
 }
 
 .is-checked {
-  border: 2px solid #edc643;
-  color: #edc643;
+  border: 2px solid rgb(237, 198, 67);
+  color: rgb(237, 198, 67);
 }
 
 .dropdown button:focus + .dropdown-menu {
@@ -1260,9 +1259,9 @@ button.button--primary {
 }
 
 .dropdown button:focus {
-  border: 2px solid #edc643;
-  background-color: #edc643;
-  color: #191919;
+  border: 2px solid rgb(237, 198, 67);
+  background-color: rgb(237, 198, 67);
+  color: rgb(25, 25, 25);
 }
 
 .dropdown-menu {
@@ -1287,7 +1286,7 @@ button.button--primary {
   font-style: normal;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
   padding: 0.4rem 0.7rem;
   transition: color ease-in 0.05s;
 }
@@ -1300,10 +1299,10 @@ button.button--primary {
 }
 
 input:checked + label {
-  color: #edc643;
+  color: rgb(237, 198, 67);
 }
 input:checked + label:hover {
-  color: #edc643;
+  color: rgb(237, 198, 67);
 }
 
 .dropdown-divider {
@@ -1399,7 +1398,7 @@ input:checked + label:hover {
   font-style: normal;
   font-size: 2rem;
   font-weight: 900;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
   opacity: 0.4;
 }
 
@@ -1450,7 +1449,7 @@ input:checked + label:hover {
   font-style: normal;
   font-size: 1.2rem;
   font-weight: 900;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
   text-transform: uppercase;
 }
 @media (min-width: 768px) {
@@ -1475,7 +1474,7 @@ input:checked + label:hover {
   font-style: normal;
   font-size: 1rem;
   font-weight: 700;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
   text-transform: uppercase;
 }
 @media (min-width: 768px) {
@@ -1561,7 +1560,7 @@ input:checked + label:hover {
 }
 
 .details-description {
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
 }
 .details-description strong {
   font-family: "Poppins", sans-serif;
@@ -1596,7 +1595,7 @@ input:checked + label:hover {
   font-style: normal;
   font-size: 16px;
   font-weight: 400;
-  color: #eef0f2;
+  color: rgb(238, 240, 242);
 }
 
 .details-actions {
@@ -1634,7 +1633,7 @@ input:checked + label:hover {
 
 .uk-card button {
   font-size: 2rem;
-  color: #c83e4d;
+  color: rgb(200, 62, 77);
   background-color: transparent;
   border: none;
   outline: none;
